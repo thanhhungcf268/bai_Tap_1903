@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3: Viết hàm tìm giá trị lớn nhất, giá trị nhỏ nhất của một mảng. Mảng này người dùng nhập từ màn hình</title>
+</head>
+<body>
+<div>
+    <button type="button" onclick="total()">Click Me</button>
+    <p id="sUot"></p>
+    <p id="sUot2"></p>
+
+</div>
+</body>
+</html>
+<script>
+    var newarray = [];
+    for (let i=0;i<10;i++){
+        newarray[i]= parseInt(prompt("nhập số cần kiểm tra :"));
+    }
+    function total() {
+        let max = newarray[0];
+        let min = newarray[0];
+        for (let i=1;i<newarray.length;i++){
+            if (newarray[0]<newarray[i]){
+                max =newarray[i]
+            }
+        }
+        for (let i=1;i<newarray.length;i++){
+            if (newarray[0]>newarray[i]){
+                min =newarray[i]
+            }
+        }
+        document.getElementById("sUot").innerHTML = "số lớn nhất trong chuỗi là = " + max;
+        document.getElementById("sUot2").innerHTML = "số bé nhất trong chuỗi là = " + min;
+
+    }
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5: Viết hàm kiểm tra giá trị người dùng nhập có phải là số nguyên hay không. hiển thị thông báo</title>
+</head>
+<body onload="ok()">
+<form>
+    <input id="1">
+</form>
+</body>
+</html>
+<script>
+    function key(evt) {
+        console.log(evt)
+        if (evt.keyCode > 47 && evt.keyCode < 59) {
+        } else {
+            var a = document.getElementById('1').value;
+            document.getElementById('1').innerHTML = a.substring(0, a.length - 1);
+            alert('nhập sai rồi')
+        }
+    }
+
+    function ok() {
+        window.addEventListener("keyup", key)
+    }
+</script>

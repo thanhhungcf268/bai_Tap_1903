@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2: Viết hàm tính trung bình cộng của một mảng. mảng này người dùng nhập từ màn hình</title>
+</head>
+<body>
+<div id="output"></div>
+</body>
+</html>
+<script>
+    var array = [];
+    var total=0;
+    for (let i=0;i< 4;i++){
+        debugger
+         array[i] = parseInt(prompt(" nhập kí tự số cần tính :"));
+    }
+    for (let i=0;i<array.length;i++){
+        total += array[i]
+    }
+    total = total/array.length
+    document.getElementById("output").innerHTML = total;
+</script>

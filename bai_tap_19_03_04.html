@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4: Viết hàm cộng trừ nhân chia hai số nhập từ màn hình</title>
+</head>
+<body>
+<div>
+    <input id="in1">
+    <br>
+    <br>
+    <input id="in2">
+    <br>
+    <br>
+    <p>result = <span id="output" ></span></p>
+    <br>
+    <br>
+    <button type="button" onclick="result('+')">+</button>
+    <button type="button" onclick="result('-')">-</button>
+    <button type="button" onclick="result('x')">x</button>
+    <button type="button" onclick="result('/')">/</button>
+</div>
+</body>
+</html>
+<script>
+    function result(calculation) {
+        var in1= document.getElementById("in1").value;
+        var in2= document.getElementById("in1").value;
+        switch (calculation) {
+            case '+':
+                document.getElementById('output').innerHTML = in1+in2;
+                return
+            case '-':
+                document.getElementById('output').innerHTML = in1-in2;
+                return;
+            case 'x':
+                document.getElementById('output').innerHTML = in1*in2;
+                return;
+            case '/':
+                document.getElementById('output').innerHTML = in1/in2;
+                return;
+        }
+    }
+</script>
