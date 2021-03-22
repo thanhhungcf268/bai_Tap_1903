@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10: Viết chương trình đếm các số lượng các phần tử lặp trong mảng</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    var array10 = [1, 2, 1, 5, 6, 3, 4, 4, 4, 4, 5, 2, 1, 6];
+    function countDuplicates(array) {
+        let result = 0;
+        let values = [];
+        let count = [];
+        let index = -1;
+        for (let i = 0; i < array.length; i++) {
+            let thisValue = array[i];
+            if (values.indexOf(thisValue) === -1) {
+                index++;
+                values[index] = thisValue;
+                count[index] = 1;
+            } else {
+                let where = values.indexOf(thisValue);
+                count[where]++;
+            }
+        }
+        for (let i = 0; i < count.length; i++) {
+            if (count[i] > 1) {
+                result++;
+            }
+        }
+        return result;
+    }
+
+    console.log("10. " + countDuplicates(array10));
+</script>
+</script>
